@@ -1,3 +1,10 @@
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
 /* === NAVBAR === */
 .navbar {
     width: 100%;
