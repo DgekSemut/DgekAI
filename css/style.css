@@ -1,3 +1,113 @@
+/* === NAVBAR === */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 18px 40px;
+    background: rgba(15, 18, 25, 0.55);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4cc9f0;
+}
+
+.nav-logo img {
+    height: 42px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: #4cc9f0;
+}
+
+/* Language button */
+.lang-btn {
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* === BURGER === */
+.burger {
+    width: 34px;
+    height: 26px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* === MOBILE MENU === */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(15, 18, 25, 0.9);
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+    gap: 25px;
+    transition: 0.4s ease;
+    z-index: 900;
+}
+
+.mobile-menu a {
+    font-size: 22px;
+    opacity: 0.9;
+}
+
+.mobile-menu a:hover {
+    color: #4cc9f0;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .nav-links { display: none; }
+    .burger { display: flex; }
+}
+
 /* === GLOBAL === */
 * {
     margin: 0;
