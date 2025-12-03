@@ -1,17 +1,20 @@
 /* === NAVBAR === */
+
 .navbar {
     width: 100%;
+    padding: 20px 0;
+    background: #0d0f12;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 18px 40px;
-    background: rgba(15, 18, 25, 0.55);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,32 +23,94 @@
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 22px;
+    gap: 10px;
+    color: #fff;
+    font-size: 20px;
     font-weight: 700;
-    color: #4cc9f0;
+    text-decoration: none;
 }
 
 .nav-logo img {
-    height: 42px;
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 28px;
 }
 
 .nav-links a {
-    font-size: 17px;
-    font-weight: 500;
-    opacity: 0.85;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.8;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
     opacity: 1;
-    color: #4cc9f0;
 }
+
+.lang-btn {
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* === BURGER MENU === */
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+/* === MOBILE MENU === */
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #0d0f12;
+    width: 200px;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding: 20px;
+    border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.mobile-menu a {
+    color: #fff;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-decoration: none;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
 
 /* Language button */
 .lang-btn {
@@ -129,43 +194,6 @@ img {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-/* === NAVBAR === */
-.navbar {
-    width: 100%;
-    padding: 20px 40px;
-    background: rgba(15, 18, 25, 0.6);
-    backdrop-filter: blur(12px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.navbar .logo {
-    height: 48px;
-}
-
-.navbar nav {
-    display: flex;
-    gap: 28px;
-}
-
-.navbar nav a {
-    font-weight: 500;
-    opacity: 0.85;
-    transition: 0.3s;
-}
-
-.navbar nav a:hover,
-.navbar nav a.active {
-    opacity: 1;
-    color: #4cc9f0;
 }
 
 /* === HERO SECTION === */
